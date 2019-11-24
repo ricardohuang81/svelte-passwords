@@ -56,7 +56,7 @@ button {
 <button on:click="{confirmPw}">Add Password</button>
 <!-- binding can be done 2 ways below -->
 <ul>
-	{#each passwords as pw, ind}
+	{#each passwords as pw, ind (pw)}
 		<!-- <li class="pw" on:click="{removePw.bind(this, ind)}">{pw}</li> -->
 		<li class="pw" on:click={() => removePw(ind)}>{pw}</li>
 	{/each}
